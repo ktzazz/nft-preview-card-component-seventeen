@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Blue500: hsl(215, 51%, 70%);
+  --Cyan400: hsl(178, 100%, 50%);
+  --BlueMainBG: hsl(217, 54%, 11%);
+  --BlueCardBG: hsl(216, 50%, 16%);
+  --BlueLine: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --fontSize: 18px;
+  --fontFamily: "Outfit", sans-serif;
+  --Light: 300;
+  --Regular: 400;
+  --SemiBold: 600;
+}
+
+/*base*/
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--BlueMainBG);
+  font-family: var(--fontFamily);
+  color: var(--White);
+}
+
+/* layout.css */
+main {
+  width: clamp(20rem, 80vw, 30rem);
+  padding: 2.5rem;
+  background-color: var(--BlueCardBG);
+  border-radius: 16px;
+}
+
+.c-card__image img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 2%;
+}
+
+/* module.css */
+
+/* state.css */
