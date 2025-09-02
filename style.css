@@ -144,7 +144,9 @@ main {
   letter-spacing: 0.02rem;
 }
 
-/*HOVER STATES*/
+/* module.css */
+
+/* state.css */
 
 .c-card__title:hover,
 .c-card__name_bold:hover {
@@ -159,7 +161,3 @@ main {
 .c-card__wrapper:hover::before {
   opacity: 1;
 }
-
-/* module.css */
-
-/* state.css */
