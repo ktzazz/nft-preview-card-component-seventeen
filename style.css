@@ -33,19 +33,131 @@ body {
   color: var(--White);
 }
 
-/* layout.css */
-main {
-  width: clamp(20rem, 80vw, 30rem);
-  padding: 2.5rem;
-  background-color: var(--BlueCardBG);
-  border-radius: 16px;
+footer {
+  position: absolute;
+  bottom: 1rem;
+  color: var(--Blue500);
 }
 
-.c-card__image img {
+/* layout.css */
+main {
+  width: clamp(20rem, 70vw, 26rem);
+  padding: 1.5rem;
+  background-color: var(--BlueCardBG);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+.c-card__image {
   display: block;
   width: 100%;
   object-fit: contain;
-  border-radius: 2%;
+  border-radius: 0.7rem;
+}
+
+.c-card__wrapper {
+  position: relative;
+}
+
+.c-card__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  background: url("images/icon-view.svg") no-repeat center
+    hsla(178, 100%, 50%, 0.5);
+}
+
+.c-card__title {
+  margin: 1.5rem 0;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: var(--SemiBold);
+  color: var(--White);
+}
+
+.c-card__description {
+  margin: 1.5rem 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-weight: var(--Light);
+  color: var(--Blue500);
+  line-height: 1.7;
+}
+
+.c-card__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.c-card__icon {
+  display: flex;
+  align-items: center;
+}
+
+.c-card__price,
+.c-card__time {
+  font-size: 0.9rem;
+  margin-inline-start: 0.5rem;
+}
+
+.c-card__price {
+  color: var(--Cyan400);
+  font-weight: var(--SemiBold);
+}
+
+.c-card__time {
+  color: var(--Blue500);
+  font-weight: var(--Regular);
+}
+
+.c-card__author {
+  display: flex;
+  align-items: center;
+  margin-block-start: 1.5rem;
+  border-block-start: 1px solid var(--BlueLine);
+  padding-block-start: 1.5rem;
+  font-size: clamp(0.8rem, 3vw, 1.1rem);
+}
+
+.c-card__avatar {
+  width: clamp(2rem, 4vw, 2.5rem);
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  margin-inline-end: 1.5rem;
+}
+
+.c-card__name {
+  font-weight: var(--Light);
+  color: var(--Blue500);
+  margin-inline-end: 0.3rem;
+  letter-spacing: 0.02rem;
+}
+
+.c-card__name_bold {
+  font-weight: var(--Regular);
+  color: var(--White);
+  letter-spacing: 0.02rem;
+}
+
+/*HOVER STATES*/
+
+.c-card__title:hover,
+.c-card__name_bold:hover {
+  color: var(--Cyan400);
+  cursor: pointer;
+}
+
+.c-card__image:hover {
+  cursor: pointer;
+}
+
+.c-card__wrapper:hover::before {
+  opacity: 1;
 }
 
 /* module.css */
